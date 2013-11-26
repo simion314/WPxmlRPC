@@ -1,0 +1,8 @@
+0000000000000000000000000000000000000000 e036cc10378520a8e67d524c4f2cf2d64f273fda Pranav Hosangadi <pranav.hosangadi@gmail.com> 1346255563 +0530	clone: from https://github.com/pranavh/WPxmlRPC
+e036cc10378520a8e67d524c4f2cf2d64f273fda b1d67efeeb3136cd32dcef026ffd66b4eef3873a Pranav Hosangadi <pranav.hosangadi@gmail.com> 1348666550 +0530	commit: connection attempts added to WPService
+b1d67efeeb3136cd32dcef026ffd66b4eef3873a d1cd1addfc7686a184bcc5d56dc8b1e88d74e769 Pranav Hosangadi <pranav.hosangadi@gmail.com> 1348668691 +0530	commit: Misc fixes
+d1cd1addfc7686a184bcc5d56dc8b1e88d74e769 b9029e77d6ee9f99a5f56424f847b1f25d5b5ed1 Pranav Hosangadi <pranav.hosangadi@gmail.com> 1348757075 +0530	commit: automatically add trailing / to endpoint if missing
+b9029e77d6ee9f99a5f56424f847b1f25d5b5ed1 676b540b37f8d147e1b4d5fb51b822a80c945e30 Pranav Hosangadi <pranav.hosangadi@gmail.com> 1348760902 +0530	commit: minor change
+676b540b37f8d147e1b4d5fb51b822a80c945e30 0f85e59da6e618af424fe156ef59669743cb25c4 Pranav Hosangadi <pranav.hosangadi@gmail.com> 1361540834 +0530	commit: Error Event added
+0f85e59da6e618af424fe156ef59669743cb25c4 76dc1e79d9caf31f15279400afb051d27bcee563 Pranav Hosangadi <pranav.hosangadi@gmail.com> 1373625236 +0530	commit: featured image support
+76dc1e79d9caf31f15279400afb051d27bcee563 8c1a0c4e66f18ac20387692536f22d701f476389 simion314 <simion314@gmail.com> 1385456614 +0200	commit: -lots of changes
