@@ -27,7 +27,7 @@ package com.absentdesign.core.webapis.wordpress.methodgroups{
 	import com.absentdesign.core.webapis.wordpress.*;
 	import com.absentdesign.core.webapis.wordpress.events.WPServiceEvent;
 	import com.adobe.protocols.dict.events.ErrorEvent;
-	import com.adobe.xml.syndication.generic.Image;
+	
 	
 	import flash.events.Event;
 	import flash.events.IOErrorEvent;

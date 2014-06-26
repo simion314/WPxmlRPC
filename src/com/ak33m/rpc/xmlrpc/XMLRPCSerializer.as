@@ -185,7 +185,10 @@ package com.ak33m.rpc.xmlrpc
 		
 		public static function deserialize (rxmlresult:XMLDocument):*
 		{
-			var xmlresult:XML = new XML(rxmlresult.toString());
+			var str:String=rxmlresult.toString();
+			if(str.indexOf("")>=0)
+				str=str.split("").join("\n");
+			var xmlresult:XML = new XML(str);
 			var resultvaluexml:XMLList = xmlresult.params.param.value;
 			var faultxml:XMLList = xmlresult.fault.value;
 			if (resultvaluexml.toString() != "")
