@@ -5,6 +5,7 @@
     <classEntry path="com.absentdesign.core.webapis.wordpress.PostExtended"/>
     <classEntry path="com.absentdesign.core.webapis.wordpress.methodgroups.MediaObjectExtended"/>
     <classEntry path="com.absentdesign.core.webapis.wordpress.WPService"/>
+    <classEntry path="com.test314.Testclass"/>
   </includeClasses>
   <includeResources/>
   <namespaceManifests/>
