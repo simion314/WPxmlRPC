@@ -195,7 +195,14 @@ package com.ak33m.rpc.xmlrpc
 			return decodeObject(resultvaluexml);
 			else if (faultxml)
 			{
-				var faultobj:* = decodeObject(faultxml);
+				var faultobj:*;
+				try{
+					faultobj = decodeObject(faultxml);
+				}
+				catch(e:Error){
+					trace("error in deserialize xmlrpc response "+e);
+					throw new Error(RPCMessageCodes.INVALID_XMLRPCFORMAT);
+				}
 				var tfault:Fault = new Fault(faultobj.faultCode,faultobj.faultString);
 				return tfault;
 			}
