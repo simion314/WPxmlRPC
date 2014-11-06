@@ -84,6 +84,7 @@ public class Posts extends WPMethodGroup {
         loadRequest(request, getPost, postId);
     }
 
+
     /**
      * Wrapper for metaWeblog.newPost - add a new Post
      * <p>Will dispatch a ServiceEvent of type WPServiceEvent.NEW_POST once loaded</p>

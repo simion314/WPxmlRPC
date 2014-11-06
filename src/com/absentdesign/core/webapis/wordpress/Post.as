@@ -49,8 +49,5 @@ package com.absentdesign.core.webapis.wordpress{
 		public var categories:Array;
 		public var sticky:Boolean;
 		public var publish:int=1;
-		
-	
 	}
-	
 }

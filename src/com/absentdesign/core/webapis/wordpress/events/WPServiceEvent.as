@@ -44,7 +44,8 @@ package com.absentdesign.core.webapis.wordpress.events{
 		public static const SET_POST_CATEGORIES:String = "WPServiceEventSetPostCategories";
 		public static const EDIT_POST:String = "WPServiceEventEditPost";
 		public static const GET_POST:String = "WPServiceEventGetPost";
-		public static const NEW_POST:String = "WPServiceEventNewPost";
+        public static const GET_POSTS:String = "WPServiceEventGetPosts";
+        public static const NEW_POST:String = "WPServiceEventNewPost";
 		public static const GET_CATEGORIES:String = "WPServiceEventGetCategories";
 		public static const NEW_CATEGORY:String = "WPServiceEventNewCategory";
 		public static const DELETE_CATEGORY:String = "WPServiceEventDeleteCategory";
@@ -86,6 +87,7 @@ package com.absentdesign.core.webapis.wordpress.events{
 				case SET_POST_CATEGORIES:
 				case EDIT_POST:
 				case GET_POST:
+                case GET_POSTS:
 				case NEW_POST:
 				case GET_CATEGORIES:
 				case NEW_CATEGORY:

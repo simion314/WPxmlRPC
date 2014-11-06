@@ -112,6 +112,8 @@ public dynamic class XMLRPCObject extends AbstractRPCObject implements IMXMLObje
         responder.addEventListener(RPCEvent.EVENT_RESULT, this.onResult);
         responder.addEventListener(RPCEvent.EVENT_FAULT, this.onFault);
         responder.addEventListener(RPCEvent.EVENT_CANCEL, this.onFault);
+
+
         ttoken.addResponder(responder);
 
         //Show Busy cursor
