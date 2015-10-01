@@ -38,6 +38,8 @@ import flash.utils.ByteArray;
 
 import mx.rpc.events.FaultEvent;
 
+import org.osmf.elements.compositeClasses.SerialElementSegment;
+
 /**
  * concrete WPMethodGroup for manipulating Posts
  */
@@ -265,11 +267,16 @@ public class Posts extends WPMethodGroup {
      *
      * @param count The number of posts to retreive. If you want all posts just use a really high number (999999)
      */
-    public function getRecentPosts(count:uint = 10):void {
+    public function getRecentPosts(count:int):void {
+        var params:Array=[blogId, username, password];
+        if(count&&count>0)
+            params.push(count);
+        else
+            params.push(1000);
         var request:WPServiceRequest = new WPServiceRequest(
                 service as WPService,
                 "metaWeblog.getRecentPosts",
-                [blogId, username, password, count],
+                params,
                 WPMethodGroupHelper.PARSE_RECENT_POSTS,
                 WPServiceEvent.GET_RECENT_POSTS
         );
@@ -312,7 +319,7 @@ public class Posts extends WPMethodGroup {
      * @param content the new post data
      * @param publish whether to publish immediately or save as a draft
      */
-    public function editPost(postId:int, post:Post, publish:Boolean, callback:Function, featuredImageUri:String):void {
+    public function editPost(postId:int, post:Post, publish:Boolean, callback:Function, featuredImageUri:String=null):void {
         if (featuredImageUri) {
             this.handleEditWithFeaturedImage(postId, post, publish, callback, featuredImageUri);
             return;

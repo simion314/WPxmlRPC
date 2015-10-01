@@ -188,7 +188,21 @@ package com.ak33m.rpc.xmlrpc
 			var str:String=rxmlresult.toString();
 			if(str.indexOf("")>=0)
 				str=str.split("").join("\n");
-			var xmlresult:XML = new XML(str);
+            var xmlresult:XML;
+            try{
+                xmlresult= new XML(str);
+            }
+            catch(e:Error){
+                str=attemptCleanupXmlStr(str);
+                try{
+                    xmlresult = new XML(str);
+                }
+                catch(e:Error){
+                    trace("error in deserialize xmlrpc response " + e+" xml resp was "+str);
+                    throw new Error(RPCMessageCodes.INVALID_XMLRPCFORMAT);
+                }
+
+            }
 			var resultvaluexml:XMLList = xmlresult.params.param.value;
 			var faultxml:XMLList = xmlresult.fault.value;
 			if (resultvaluexml.toString() != "")
@@ -211,6 +225,16 @@ package com.ak33m.rpc.xmlrpc
 				throw new Error(RPCMessageCodes.INVALID_XMLRPCFORMAT);
 			}
 		}
+
+        private static function attemptCleanupXmlStr(str:String):String {
+            if(str.indexOf("<br />")>=0){
+                var endIndex:int=str.indexOf("<methodResponse>")
+                var str2:String=str.slice(endIndex);
+                trace("invalid XML response was modified");
+                return '<?xml version="1.0" encoding="UTF-8"?>\n'+str2;
+            }
+            return str;
+        }
 		
 		protected static function decodeObject (robject:*):*
 		{
